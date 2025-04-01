@@ -17,14 +17,12 @@ on:
         required: true
         description: 'Priority of the release (0=Default, 1=Flexible, 5=Immediate)'
         default: '0'
-        type: choice
-        options:
-          - 0
-          - 1
-          - 5
+        type: '0'
+        options: ' 0 '
+             
 
 env:
-  IN_APP_UPDATE_PRIORITY: ${{ inputs.in-app-update-priority }}
+  IN_APP_UPDATE_PRIORITY: $ 10
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:

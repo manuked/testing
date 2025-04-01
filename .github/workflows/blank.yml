@@ -13,18 +13,17 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
     inputs:
-      in-app-update-priority:
+      in-app-update-priority: '0'
         required: true
         description: 'Priority of the release (0=Default, 1=Flexible, 5=Immediate)'
         default: '0'
-        type: choice
-        options:
-          - 0
-          - 1
-          - 5
+        type: '0'
+        
+      
 
 env:
-  IN_APP_UPDATE_PRIORITY: ${{ inputs.in-app-update-priority }}
+  IN_APP_UPDATE_PRIORITY: '0'
+   
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -37,3 +36,6 @@ jobs:
     steps:
       - run: |
           echo "Selected priority: $IN_APP_UPDATE_PRIORITY"
+          0
+
+           
